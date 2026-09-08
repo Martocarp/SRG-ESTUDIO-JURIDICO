@@ -28,5 +28,17 @@ async function cargarEquipo() {
         console.error("Hubo un error al cargar el equipo:", error);
     }
 }
-
 cargarEquipo();
+
+window.addEventListener("scroll", () => {
+    const header = document.getElementById("header");
+    
+    // Se achica recién cuando bajamos más de 150 píxeles (evitando el bucle)
+    if (window.scrollY > 150) {
+        header.classList.add("scrolled");
+    } 
+    // Vuelve a su tamaño original SOLO si subimos casi hasta arriba de todo
+    else if (window.scrollY < 20) {
+        header.classList.remove("scrolled");
+    }
+});

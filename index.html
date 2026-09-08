@@ -3,131 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SRG ADOBAGO</title>
+    <title>SRG ABOGADOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="web.js" defer></script>
     <link rel="icon" href="./img/LOGO_WHITE.jpeg">
 </head>
 <body>
+
 <header id="header">
-    <a href=""><img src="./img/LOGO_RED.jpeg" alt="" id="img_header"></a>
+    <a href="#HOME" class="logo-link">
+        <img src="./img/LOGO_RED.jpeg" alt="Logo" id="img_header">
+        <span class="texto-logo">SRG ESTUDIO JURÍDICO</span>
+    </a>
     <nav>
         <a href="#HOME">INICIO</a>
         <a href="#cobertura">SERVICIOS</a>
         <a href="#nosotros">NOSOTROS</a>
-        <a href="#contacto">contactanos</a>
-        <a href="">consulta</a> 
-        <!-- EN ESTA ULTIMA TIENE QUE IR UNA API DE WSP O NUMERO -->
+        <a href="#contacto">CONTACTANOS</a>
+        <a href="#contacto">CONSULTA</a> 
     </nav>
 </header>
 
 <main>
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/5491100000000" class="btn-wsp-flotante" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964 1.006-3.585c-.612-1.037-.936-2.222-.936-3.46 0-3.834 3.12-6.954 6.954-6.954 3.834 0 6.953 3.12 6.953 6.954 0 3.835-3.119 6.954-6.953 6.954z"/></svg>
+    </a>
 
-<div id="carrusel" class="carrusel"></div>
+    <section id="HOME">
+        <div class="information_box">
+            <h2>Hablemos de tu caso</h2>
+            <img src="./img/LOGO_RED.png" alt="Logo Cuerpo" id="img_body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas officia temporibus error quis porro. Perspiciatis.</p>
+            
+            <a href="https://wa.me/5491100000000" class="btn-wsp" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                ESCRIBINOS POR WHATSAPP
+            </a>
+        </div>
+    </section>
 
-<section id="HOME">
-    <div id="info_nosotros" class="information_box">
-        <br><br><br><br>
-
-        <h2>TEXTO EXAMPLE</h2>
-            <img src="./img/LOGO_RED.png" alt="" id="img_body">SRC ESTUDIO JURIDICO
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas officia temporibus error quis porro. Perspiciatis .</p>
+    <section id="cobertura" class="cards-block">
+        <h2>SERVICIOS</h2>
+        <h4>especializados en...</h4>
         
-        <a href="https://github.com/Martocarp">
-            <input type="button" value="BTN WSP">
-            <!-- ESTE BOTON TE TIENE QUE LLEVAR A UN NUMEERO DE WASAP -->
-        </a>
+        <div id="cards">
+            <!-- TARJETA 1 -->
+            <div class="info-cards">
+                <div class="card-image-container">
+                    <img src="./img/PATTERN_RED.jpeg" alt="Accidentes Laborales">
+                    <h3>Accidentes Laborales</h3>
+                </div>
+                <div class="card-content">
+                    <p>Si sufriste un accidente en tu lugar de trabajo o yendo hacia él (in itinere), reclamamos la indemnización justa ante la ART.</p>
+                    <a href="https://wa.me/5491100000000" class="btn-wsp" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                        CONSULTÁ ACÁ
+                    </a>
+                </div>
+            </div>
 
-    </div>
-</section>
+            <!-- TARJETA 2 -->
+            <div class="info-cards">
+                <div class="card-image-container">
+                    <img src="./img/PATTERN_RED.jpeg" alt="Accidentes de Tránsito">
+                    <h3>Accidentes de Tránsito</h3>
+                </div>
+                <div class="card-content">
+                    <p>Reclamamos indemnizaciones integrales por lesiones físicas, daños materiales y lucro cesante contra las aseguradoras.</p>
+                    <a href="https://wa.me/5491100000000" class="btn-wsp" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                        CONSULTÁ ACÁ
+                    </a>
+                </div>
+            </div>
 
-<br><br><br><br><br><br><br>
+            <!-- TARJETA 3 -->
+            <div class="info-cards">
+                <div class="card-image-container">
+                    <img src="./img/PATTERN_RED.jpeg" alt="Enfermedades Profesionales">
+                    <h3>Enfermedades Profesionales</h3>
+                </div>
+                <div class="card-content">
+                    <p>Hernias, problemas auditivos o estrés laboral. Si tu trabajo afectó tu salud a largo plazo, la ley te protege.</p>
+                    <a href="https://wa.me/5491100000000" class="btn-wsp" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                        CONSULTÁ ACÁ
+                    </a>
+                </div>
+            </div>
 
-<section id="cobertura"></section>
-<div id="cards-block">
-    <h2>SERVICIOS</h2>
-    <h4>especializados en...</h4>
-<br><br>
-    <div id="cards">
-
-        <div class="info-cards">
-            <h3>Accidentes Laborales (ART)</h3>
-            <p>Si sufriste un accidente en tu lugar de trabajo o yendo hacia él (in itinere), reclamamos la indemnización justa ante la ART.</p>
-            <a href="https://estudiormp.com.ar/#"><input type="button" value="BOTOOOOOOOON"></a>
+            <!-- TARJETA 4 -->
+            <div class="info-cards">
+                <div class="card-image-container">
+                    <img src="./img/PATTERN_RED.jpeg" alt="Derecho Civil y Daños">
+                    <h3>Derecho Civil y Daños</h3>
+                </div>
+                <div class="card-content">
+                    <p>Asesoramiento integral en contratos, reclamos por daños y perjuicios, y conflictos civiles generales.</p>
+                    <a href="https://wa.me/5491100000000" class="btn-wsp" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                        CONSULTÁ ACÁ
+                    </a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="info-cards">
-            <h3>Accidentes de Tránsito</h3>
-            <p>Reclamamos indemnizaciones integrales por lesiones físicas, daños materiales y lucro cesante contra las aseguradoras.</p>
-            <a href="https://estudiormp.com.ar/#"><input type="button" value="BOTOOOOOOOON"></a>
+    <section id="nosotros" class="team-block">
+        <h2>NUESTRO EQUIPO</h2>
+        <div id="us_card">
+            <div id="card_people"></div>
         </div>
+    </section>
 
-        <div class="info-cards">
-            <h3>Enfermedades Profesionales</h3>
-            <p>Hernias, problemas auditivos o estrés laboral. Si tu trabajo afectó tu salud a largo plazo, la ley te protege.</p>
-            <a href="https://estudiormp.com.ar/#"><input type="button" value="BOTOOOOOOOON"></a>
+    <section id="contacto" class="contact-block">
+        <h2>CONTACTO</h2>
+        <h4>Lorem ipsum dolor sit amet...</h4>
+
+        <div class="info-form-container">
+            <div id="info-div">
+                <h2>INFO</h2>
+                <h4>UBI</h4>
+                <h4>EMAIL</h4>
+                <h4>HORARIO</h4>
+                <h4>MAPA</h4>
+            </div>
+
+            <div id="form" class="form">
+                <form action="" method="POST">
+                    <h2>CONTACTANOS ACÁ</h2>
+                    <div>
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required>
+                    </div>
+                    <div>
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div>
+                        <label for="mensaje">Tu consulta:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos tu caso acá..." required></textarea>
+                    </div>
+                    <button type="submit">Enviar consulta</button>
+                </form>
+            </div>
         </div>
-
-        <div class="info-cards">
-            <h3>Derecho Civil y Daños</h3>
-            <p>Asesoramiento integral en contratos, reclamos por daños y perjuicios, y conflictos civiles generales.</p>
-            <a href="https://estudiormp.com.ar/#"><input type="button" value="BOTOOOOOOOON"></a>
-        </div>
-
-    </div>
-</div>
-
-<br><br>
-
-<section id="nosotros"></section>
-<h2>NUESTRO EQUIPO</h2>
-<br><br><br><br>
-<div id="us_card">
-    <div id="card_people"></div>
-</div>
-<br><br><br><br>
-
-<section id="contacto"></section>
-
-<div id="contact-block" class="contact-block">
-    <h2>CONTACTO</h2>
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio perspiciatis laborum nisi rerum ullam? Possimus tenetur esse eos!</h4>
-
-    <div id="info-div">
-        <h2>INFO</h2>
-        <h4>UBI</h4>
-        <h4>EMAIL</h4>
-        <h4>HORARIO</h4>
-        <h4>MAPA</h4>
-    </div>
-
-    <div id="form" class="form">
-        <form action="" method="POST">
-            <h2>CONTACTANOS ACÁ</h2>
-    <div>
-        <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required>
-    </div>
-
-    <div>
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-    </div>
-
-    <div>
-        <label for="mensaje">Tu consulta:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos tu caso acá..." required></textarea>
-    </div>
-    <button type="submit">Enviar consulta</button>
-</form>
-
-    </div>
-</div>
-
+    </section>
 </main>
 
 <footer>
-    <p>mondongo</p>
+    <p>SRG Estudio Jurídico © 2026</p>
 </footer>
 
 </body>
