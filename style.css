@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header
+{
+    width: 100%;
+    background-color: #560b19
+}
+#img_header
+{
+    width: 150px;
+    height: 150px;
+}
+h1
+{
+    color: #fff1cd;
+}
