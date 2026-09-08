@@ -14,8 +14,8 @@
     <nav>
         <a href="#HOME">INICIO</a>
         <a href="#cobertura">SERVICIOS</a>
-        <a href="#">NOSOTROS</a>
-        <a href="#">contactanos</a>
+        <a href="#nosotros">NOSOTROS</a>
+        <a href="#contacto">contactanos</a>
         <a href="">consulta</a> 
         <!-- EN ESTA ULTIMA TIENE QUE IR UNA API DE WSP O NUMERO -->
     </nav>
@@ -44,6 +44,7 @@
 <br><br><br><br><br><br><br>
 
 <section id="cobertura"></section>
+<div id="cards-block">
     <h2>SERVICIOS</h2>
     <h4>especializados en...</h4>
 <br><br>
@@ -84,11 +85,49 @@
 <div id="us_card">
     <div id="card_people"></div>
 </div>
+<br><br><br><br>
+
+<section id="contacto"></section>
+
+<div id="contact-block" class="contact-block">
+    <h2>CONTACTO</h2>
+    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio perspiciatis laborum nisi rerum ullam? Possimus tenetur esse eos!</h4>
+
+    <div id="info-div">
+        <h2>INFO</h2>
+        <h4>UBI</h4>
+        <h4>EMAIL</h4>
+        <h4>HORARIO</h4>
+        <h4>MAPA</h4>
+    </div>
+
+    <div id="form" class="form">
+        <form action="" method="POST">
+            <h2>CONTACTANOS ACÁ</h2>
+    <div>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required>
+    </div>
+
+    <div>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+    </div>
+
+    <div>
+        <label for="mensaje">Tu consulta:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos tu caso acá..." required></textarea>
+    </div>
+    <button type="submit">Enviar consulta</button>
+</form>
+
+    </div>
+</div>
 
 </main>
 
 <footer>
-    <p></p>
+    <p>mondongo</p>
 </footer>
 
 </body>

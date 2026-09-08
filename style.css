@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+body
+{
+    background-color: #fff1cd;
+}
 header
 {
     width: 100%;
@@ -34,4 +38,8 @@ h1
     width: 250px;
     height: 250px;
     border-radius: 50%;
+}
+footer
+{
+    background-color: #560b19;
 }
