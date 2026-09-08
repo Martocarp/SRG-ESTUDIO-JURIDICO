@@ -1,0 +1,21 @@
+[
+    {
+        "nombre": "NOMBRE 1",
+        "certificacion": "CERTIFICACIONES/DIPLOMAS",
+        "imagen": "./img/PATTERN_RED.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet...",
+        "link1": "https://github.com/Martocarp", 
+        "link2": "https://github.com/Martocarp",
+        "link3": "https://github.com/Martocarp"
+    },
+
+    {
+        "nombre": "NOMBRE 2",
+        "certificacion": "CERTIFICACIONES/DIPLOMAS",
+        "imagen": "./img/LOGO_RED.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet...",
+        "link": "https://linkedin.com/in/tu-perfil",
+        "link2": "https://github.com/Martocarp",
+        "link3": "https://github.com/Martocarp"
+    }
+]

@@ -10,10 +10,28 @@ header
 }
 #img_header
 {
+    width: 100px;
+    height: 100px;
+}
+#img_body
+{
     width: 150px;
     height: 150px;
 }
 h1
 {
     color: #fff1cd;
+}
+#id_header
+{
+    width: auto;
+    height: auto;
+    align-content: center;
+    box-sizing: border-box;
+}
+.img_profile
+{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
 }
