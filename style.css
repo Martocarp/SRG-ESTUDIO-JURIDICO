@@ -245,8 +245,8 @@ nav a:hover {
 }
 
 #img_body {
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
     object-fit: contain;
 }
 
@@ -479,6 +479,7 @@ nav a:hover {
     border-radius: 5px;
     font-family: var(--fuente-textos);
     background-color: #fff;
+    resize: none;
 }
 
 .form input:focus,
