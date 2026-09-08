@@ -1,4 +1,7 @@
 const contenedorTarjetas = document.getElementById("us_card");
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
 
 async function cargarEquipo() {
     try {
@@ -42,3 +45,13 @@ window.addEventListener("scroll", () => {
         header.classList.remove("scrolled");
     }
 });
+
+function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+
+if (slides.length > 0) {
+    setInterval(nextSlide, 5000);
+}

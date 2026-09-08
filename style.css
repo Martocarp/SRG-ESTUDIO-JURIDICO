@@ -176,12 +176,53 @@ nav a:hover {
 
 /* ================== SECCIONES ================== */
 #HOME {
-    padding: 100px 5%;
+    position: relative;
+    padding: 150px 5%;
     text-align: center;
-    background-color: var(--color-principal-2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh; /* Hace que ocupe casi toda la pantalla inicial */
+}
+
+.carousel-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Transición súper suave */
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 0, 12, 0.75); /* Bordó oscuro semi-transparente */
+    z-index: 1;
 }
 
 .information_box {
+    position: relative;
+    z-index: 2; /* Para que quede por encima del fondo y el overlay */
     max-width: 800px;
     margin: 0 auto;
     display: flex;
@@ -190,9 +231,22 @@ nav a:hover {
     gap: 20px;
 }
 
+.information_box h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--color-principal-2);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.information_box p {
+    color: var(--color-principal-2);
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
 #img_body {
-    width: 150px;
-    height: 150px;
+    width: 350px;
+    height: 350px;
     object-fit: contain;
 }
 
@@ -457,4 +511,84 @@ footer {
     text-align: center;
     padding: 30px;
     margin-top: auto;
+}
+
+
+
+
+
+/* =========================================
+   DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
+========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. HEADER Y MENÚ */
+    header {
+        flex-direction: column; /* Pone el logo arriba y el menú abajo */
+        padding: 15px 5%;
+        gap: 15px; /* Espacio entre el logo y los botones */
+    }
+
+    #img_header {
+        margin-left: 0;
+        width: 100px; /* Logo más chico en el celu */
+        height: 100px;
+    }
+
+    nav {
+        padding-right: 0;
+        flex-wrap: wrap; /* Si no entran los botones, pasan a otra línea */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 0.8rem; /* Letra del menú más chica */
+    }
+
+    header.scrolled .texto-logo {
+        font-size: 1.2rem;
+        margin-left: 10px;
+        max-width: 250px;
+    }
+
+    /* 2. TEXTOS Y PADDINGS GENERALES */
+    #HOME {
+        padding: 120px 5% 80px;
+        min-height: 70vh;
+    }
+
+    .information_box h2 {
+        font-size: 2rem; /* Achicamos el título principal */
+    }
+
+    .information_box p {
+        font-size: 1rem;
+    }
+
+    .cards-block, .team-block, .contact-block {
+        padding: 60px 5%; /* Reducimos los espacios blancos gigantes */
+    }
+
+    .cards-block h2, .team-block h2, .contact-block > h2 {
+        font-size: 2rem; /* Achicamos los títulos de las secciones */
+    }
+
+    /* 3. BOTONES WHATSAPP */
+    .btn-wsp {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    .btn-wsp-flotante {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .btn-wsp-flotante svg {
+        width: 30px;
+        height: 30px;
+    }
 }
