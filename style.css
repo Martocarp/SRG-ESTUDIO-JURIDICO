@@ -523,8 +523,111 @@ footer {
 }
 
 
+/* =========================================
+   SECCIÓN PREGUNTAS FRECUENTES (FAQ)
+========================================= */
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
 
+.faq-item {
+    background-color: var(--color-principal-2); /* Fondo crema claro */
+    border-radius: 8px;
+    border-left: 5px solid var(--color-principal-1); /* Borde bordó distintivo */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
 
+.faq-item:hover {
+    box-shadow: 0 8px 15px rgba(86, 11, 25, 0.15);
+}
+
+.faq-question {
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; /* Elimina la flecha nativa de los navegadores */
+}
+
+/* Soporte extra para ocultar la flecha nativa en Chrome/Safari */
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-textos h3 {
+    font-size: 1.2rem;
+    color: var(--color-principal-1);
+    margin-bottom: 5px;
+    font-family: var(--fuente-subtitulos);
+}
+
+.faq-short {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+}
+
+.faq-icon {
+    font-size: 2rem;
+    color: var(--color-principal-1);
+    font-weight: normal;
+    transition: transform 0.3s ease;
+    line-height: 1;
+}
+
+/* LA MAGIA: Cuando el elemento <details> está abierto, rotamos el ícono 45 grados */
+.faq-item[open] .faq-icon {
+    transform: rotate(45deg);
+    color: var(--color-secundario-2);
+}
+
+.faq-answer {
+    padding: 0 25px 25px 25px;
+    font-size: 1rem;
+    color: #333;
+    border-top: 1px solid rgba(86, 11, 25, 0.1);
+    margin-top: 10px;
+    padding-top: 20px;
+}
+/* Le agregamos la animación a la respuesta solo cuando el acordeón está abierto ([open]) */
+/* TRUCO CSS GRID PARA ANIMACIÓN FLUIDA */
+.faq-answer-wrapper {
+    display: grid;
+    grid-template-rows: 0fr; /* Empieza colapsado (altura 0) */
+    transition: grid-template-rows 0.4s ease;
+}
+
+.faq-answer {
+    overflow: hidden; /* Oculta el texto cuando está cerrado */
+}
+
+/* Espaciado del texto interno */
+.faq-answer p {
+    padding: 0 25px 25px 25px;
+    font-size: 1rem;
+    color: #333;
+    border-top: 1px solid rgba(86, 11, 25, 0.1);
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+/* CUANDO ESTÁ ABIERTO */
+.faq-item.abierto .faq-answer-wrapper {
+    grid-template-rows: 1fr; /* Se expande a la altura exacta del texto */
+}
+
+.faq-item.abierto .faq-icon {
+    transform: rotate(45deg);
+    color: var(--color-secundario-2);
+}
 
 /* =========================================
    DISEÑO RESPONSIVO (MÓVILES Y TABLETS)

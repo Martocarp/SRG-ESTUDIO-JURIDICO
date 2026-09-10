@@ -1,5 +1,6 @@
 const contenedorTarjetas = document.getElementById("us_card");
 const slides = document.querySelectorAll('.slide');
+const faqQuestions = document.querySelectorAll('.faq-question');
 let currentSlide = 0;
 
 
@@ -55,3 +56,11 @@ function nextSlide() {
 if (slides.length > 0) {
     setInterval(nextSlide, 5000);
 }
+
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.parentElement;
+        // Agrega la clase 'abierto' si no la tiene, y se la saca si ya la tiene
+        item.classList.toggle('abierto');
+    });
+});
