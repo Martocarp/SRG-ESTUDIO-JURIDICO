@@ -629,6 +629,17 @@ footer {
     color: var(--color-secundario-2);
 }
 
+.subtitle-content {
+    font-family: var(--fuente-subtitulos); 
+    font-size: 9rem; /* Lo hacemos bastante más grande */
+    color: var(--color-principal-2); 
+    font-style: italic; 
+    letter-spacing: 6px; /* Estira el texto horizontalmente separando las letras */
+    transform: scaleY(2); /* Estira las letras verticalmente (hacia arriba) */
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8); /* Sombra un poco más fuerte para compensar el tamaño */
+    margin-bottom: 50px; 
+}
+
 /* =========================================
    DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
 ========================================= */
