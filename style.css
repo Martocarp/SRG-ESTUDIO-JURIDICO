@@ -1,717 +1,802 @@
 :root {
-    --color-principal-1: #560b19;
-    --color-principal-2: #fff1cd;
-    --color-secundario-1: #3a000c;
-    --color-secundario-2: #75162e;
-    --color-secundario-3: #f2e5c5;
-    --color-secundario-4: #550b18;
-    --fuente-titulos: 'Playfair Display', serif;
-    --fuente-subtitulos: 'Cormorant Garamond', serif;
-    --fuente-textos: 'Raleway', sans-serif;
+  --color-principal-1: #560b19;
+  --color-principal-2: #fff1cd;
+  --color-secundario-1: #3a000c;
+  --color-secundario-2: #75162e;
+  --color-secundario-3: #f2e5c5;
+  --color-secundario-4: #550b18;
+  --fuente-titulos: "Playfair Display", serif;
+  --fuente-subtitulos: "Cormorant Garamond", serif;
+  --fuente-textos: "Raleway", sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--color-principal-2);
-    color: #333333;
-    font-family: var(--fuente-textos);
-    line-height: 1.6;
+  background-color: var(--color-principal-2);
+  color: #333333;
+  font-family: var(--fuente-textos);
+  line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5 {
-    color: var(--color-principal-1);
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--color-principal-1);
 }
 
-h1, .texto-logo {
-    font-family: var(--fuente-titulos);
+h1,
+.texto-logo {
+  font-family: var(--fuente-titulos);
 }
 
-h2, h3, h4, h5 {
-    font-family: var(--fuente-subtitulos);
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--fuente-subtitulos);
 }
 
 header {
-    width: 100%;
-    background-color: var(--color-principal-1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: padding 0.4s ease;
+  width: 100%;
+  background-color: var(--color-principal-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: padding 0.4s ease;
 }
 
 .logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 #img_header {
-    margin-left: 50px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: all 0.4s ease;
+  margin-left: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.4s ease;
 }
 
 .texto-logo {
-    color: var(--color-principal-2);
-    font-size: 1.5rem;
-    font-weight: bold;
-    max-width: 0;
-    opacity: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    transition: all 0.4s ease;
+  color: var(--color-principal-2);
+  font-size: 1.5rem;
+  font-weight: bold;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.4s ease;
 }
 
 header.scrolled {
-    padding: 10px 5%;
+  padding: 10px 5%;
 }
 
 header.scrolled #img_header {
-    width: 0;
-    height: 0;
-    margin-left: 0;
-    opacity: 0;
+  width: 0;
+  height: 0;
+  margin-left: 0;
+  opacity: 0;
 }
 
 header.scrolled .texto-logo {
-    max-width: 400px;
-    opacity: 1;
-    margin-left: 20px;
+  max-width: 400px;
+  opacity: 1;
+  margin-left: 20px;
 }
 
 nav {
-    display: flex;
-    gap: 30px;
-    padding-right: 5%;
+  display: flex;
+  gap: 30px;
+  padding-right: 5%;
 }
 
 nav a {
-    color: var(--color-principal-2);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+  color: var(--color-principal-2);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--color-secundario-2);
+  color: var(--color-secundario-2);
 }
 
 /* ================== BOTONES WHATSAPP ================== */
 .btn-wsp {
-    background-color: #1ca74f; 
-    color: #ffffff;
-    padding: 14px 30px; 
-    border: none;
-    border-radius: 6px; 
-    font-size: 0.95rem;
-    font-weight: bold;
-    letter-spacing: 1px; 
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    font-family: var(--fuente-textos);
+  background-color: #1ca74f;
+  color: #ffffff;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+  font-family: var(--fuente-textos);
 }
 
 .btn-wsp:hover {
-    background-color: var(--color-principal-1); 
-    transform: translateY(-3px); 
-    box-shadow: 0 6px 12px rgba(86, 11, 25, 0.25); 
+  background-color: var(--color-principal-1);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(86, 11, 25, 0.25);
 }
 
 .btn-wsp svg {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .btn-wsp-flotante {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25D366;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 2000;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2000;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .btn-wsp-flotante:hover {
-    background-color: #128C7E;
-    transform: scale(1.1);
+  background-color: #128c7e;
+  transform: scale(1.1);
 }
 
 .btn-wsp-flotante svg {
-    fill: white;
-    width: 45px;
-    height: 45px;
+  fill: white;
+  width: 45px;
+  height: 45px;
 }
 
 /* ================== SECCIONES ================== */
 #HOME {
-    position: relative;
-    padding: 150px 5%;
-    text-align: center;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 85vh; /* Hace que ocupe casi toda la pantalla inicial */
+  position: relative;
+  padding: 150px 5%;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh; /* Hace que ocupe casi toda la pantalla inicial */
 }
 
 .carousel-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out; /* Transición súper suave */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* Transición súper suave */
 }
 
 .slide.active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .carousel-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(58, 0, 12, 0.75); /* Bordó oscuro semi-transparente */
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(58, 0, 12, 0.75); /* Bordó oscuro semi-transparente */
+  z-index: 1;
 }
 
 .information_box {
-    position: relative;
-    z-index: 2; /* Para que quede por encima del fondo y el overlay */
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  position: relative;
+  z-index: 2; /* Para que quede por encima del fondo y el overlay */
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .information_box h2 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: var(--color-principal-2);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--color-principal-2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .information_box p {
-    color: var(--color-principal-2);
-    font-size: 1.2rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  color: var(--color-principal-2);
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 #img_body {
-    width: 450px;
-    height: 450px;
-    object-fit: contain;
+  width: 450px;
+  height: 450px;
+  object-fit: contain;
 }
 
 .information_box h2 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
+  font-size: 2.5rem;
+  text-transform: uppercase;
 }
 
 .cards-block {
-    padding: 100px 5%;
-    background-color: var(--color-secundario-3);
-    text-align: center;
+  padding: 100px 5%;
+  background-color: var(--color-secundario-3);
+  text-align: center;
 }
 
 .cards-block h2 {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
 }
 
 .cards-block h4 {
-    color: var(--color-secundario-2);
-    margin-bottom: 50px;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 1.2rem;
+  color: var(--color-secundario-2);
+  margin-bottom: 50px;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.2rem;
 }
 
 #cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* ================== TARJETAS DE SERVICIOS ================== */
 .info-cards {
-    background-color: var(--color-principal-2);
-    border-radius: 8px;
-    box-shadow: 0 8px 15px rgba(86, 11, 25, 0.08);
-    border-top: 4px solid var(--color-principal-1);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--color-principal-2);
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(86, 11, 25, 0.08);
+  border-top: 4px solid var(--color-principal-1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .info-cards:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 20px rgba(86, 11, 25, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(86, 11, 25, 0.2);
 }
 
 .card-image-container {
-    position: relative;
-    width: 100%;
-    height: 220px;
+  position: relative;
+  width: 100%;
+  height: 220px;
 }
 
 .card-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Oscurece sutilmente la base de la imagen para que el texto resalte */
 .card-image-container::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 70%;
-    background: linear-gradient(to top, rgba(86,11,25,0.85), transparent);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70%;
+  background: linear-gradient(to top, rgba(86, 11, 25, 0.85), transparent);
+  z-index: 1;
 }
 
 .card-image-container h3 {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    color: var(--color-principal-2);
-    font-size: 1.6rem;
-    text-align: left;
-    z-index: 2;
-    margin: 0;
-    /* Sombreado para asegurar lectura perfecta */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.5);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: var(--color-principal-2);
+  font-size: 1.6rem;
+  text-align: left;
+  z-index: 2;
+  margin: 0;
+  /* Sombreado para asegurar lectura perfecta */
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    -1px -1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .card-content {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .card-content p {
-    margin-bottom: 25px;
-    font-size: 1rem;
-    color: #444;
-    text-align: center;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  color: #444;
+  text-align: center;
 }
 
 /* ================== EQUIPO ================== */
 .team-block {
-    text-align: center;
-    padding: 100px 5%;
+  text-align: center;
+  padding: 100px 5%;
 }
 
 .team-block h2 {
-    font-size: 2.5rem;
-    margin-bottom: 60px;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
 }
 
 #us_card {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card_people {
-    background-color: var(--color-principal-2);
-    border: 1px solid var(--color-secundario-3);
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background-color: var(--color-principal-2);
+  border: 1px solid var(--color-secundario-3);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .img_profile {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid var(--color-principal-1);
-    margin: 20px auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-principal-1);
+  margin: 20px auto;
 }
 
 /* ================== CONTACTO ================== */
 .contact-block {
-    background-color: var(--color-secundario-3);
-    padding: 100px 5%;
-    text-align: center;
+  background-color: var(--color-secundario-3);
+  padding: 100px 5%;
+  text-align: center;
 }
 
 .contact-block > h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .contact-block > h4 {
-    color: #555;
-    font-weight: normal;
-    margin-bottom: 50px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  color: #555;
+  font-weight: normal;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .info-form-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.text_info
-{
-    background-color: var(--color-principal-2);
-    border: 1px solid var(--color-secundario-3);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    padding: 70px;
+.text_info {
+  background-color: var(--color-principal-2);
+  border: 1px solid var(--color-secundario-3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 70px;
 }
 
 #info-div {
-    background-color: var(--color-principal-1);
-    color: var(--color-principal-2);
-    padding: 40px;
-    border-radius: 10px;
-    flex: 1;
-    min-width: 300px;
-    text-align: left;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  background-color: var(--color-principal-1);
+  color: var(--color-principal-2);
+  padding: 40px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 #info-div h2 {
-    color: var(--color-principal-2);
-    border-bottom: 2px solid var(--color-secundario-2);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+  color: var(--color-principal-2);
+  border-bottom: 2px solid var(--color-secundario-2);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #info-div h4 {
-    color: var(--color-principal-2);
-    margin-bottom: 15px;
-    font-weight: normal;
+  color: var(--color-principal-2);
+  margin-bottom: 15px;
+  font-weight: normal;
 }
 
 .form {
-    background-color: var(--color-principal-2);
-    padding: 40px;
-    border-radius: 10px;
-    flex: 1;
-    min-width: 300px;
-    text-align: left;
-    border: 1px solid var(--color-secundario-3);
+  background-color: var(--color-principal-2);
+  padding: 40px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+  border: 1px solid var(--color-secundario-3);
 }
 
 .form h2 {
-    margin-bottom: 25px;
-    text-align: center;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .form div {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: var(--color-principal-1);
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--color-principal-1);
 }
 
 .form input,
 .form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: var(--fuente-textos);
-    background-color: #fff;
-    resize: none;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: var(--fuente-textos);
+  background-color: #fff;
+  resize: none;
 }
 
 .form input:focus,
 .form textarea:focus {
-    outline: none;
-    border-color: var(--color-principal-1);
-    box-shadow: 0 0 5px rgba(86, 11, 25, 0.3);
+  outline: none;
+  border-color: var(--color-principal-1);
+  box-shadow: 0 0 5px rgba(86, 11, 25, 0.3);
 }
 
 .form button {
-    background-color: var(--color-principal-1);
-    color: var(--color-principal-2);
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: var(--color-principal-1);
+  color: var(--color-principal-2);
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .form button:hover {
-    background-color: var(--color-secundario-1);
+  background-color: var(--color-secundario-1);
 }
 
 footer {
-    background-color: var(--color-secundario-1);
-    color: var(--color-principal-2);
-    text-align: center;
-    padding: 30px;
-    margin-top: auto;
+  background-color: var(--color-secundario-1);
+  color: var(--color-principal-2);
+  text-align: center;
+  padding: 30px;
+  margin-top: auto;
 }
-
 
 /* =========================================
    SECCIÓN PREGUNTAS FRECUENTES (FAQ)
 ========================================= */
 .faq-container {
-    max-width: 800px;
-    margin: 40px auto 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: left;
+  max-width: 800px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
 }
 
 .faq-item {
-    background-color: var(--color-principal-2); /* Fondo crema claro */
-    border-radius: 8px;
-    border-left: 5px solid var(--color-principal-1); /* Borde bordó distintivo */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
+  background-color: var(--color-principal-2); /* Fondo crema claro */
+  border-radius: 8px;
+  border-left: 5px solid var(--color-principal-1); /* Borde bordó distintivo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 .faq-item:hover {
-    box-shadow: 0 8px 15px rgba(86, 11, 25, 0.15);
+  box-shadow: 0 8px 15px rgba(86, 11, 25, 0.15);
 }
 
 .faq-question {
-    padding: 20px 25px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none; /* Elimina la flecha nativa de los navegadores */
+  padding: 20px 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; /* Elimina la flecha nativa de los navegadores */
 }
 
 /* Soporte extra para ocultar la flecha nativa en Chrome/Safari */
 .faq-question::-webkit-details-marker {
-    display: none;
+  display: none;
 }
 
 .faq-textos h3 {
-    font-size: 1.2rem;
-    color: var(--color-principal-1);
-    margin-bottom: 5px;
-    font-family: var(--fuente-subtitulos);
+  font-size: 1.2rem;
+  color: var(--color-principal-1);
+  margin-bottom: 5px;
+  font-family: var(--fuente-subtitulos);
 }
 
 .faq-short {
-    font-size: 0.95rem;
-    color: #666;
-    margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
 }
 
 .faq-icon {
-    font-size: 2rem;
-    color: var(--color-principal-1);
-    font-weight: normal;
-    transition: transform 0.3s ease;
-    line-height: 1;
+  font-size: 2rem;
+  color: var(--color-principal-1);
+  font-weight: normal;
+  transition: transform 0.3s ease;
+  line-height: 1;
 }
 
 /* LA MAGIA: Cuando el elemento <details> está abierto, rotamos el ícono 45 grados */
 .faq-item[open] .faq-icon {
-    transform: rotate(45deg);
-    color: var(--color-secundario-2);
+  transform: rotate(45deg);
+  color: var(--color-secundario-2);
 }
 
 .faq-answer {
-    padding: 0 25px 25px 25px;
-    font-size: 1rem;
-    color: #333;
-    border-top: 1px solid rgba(86, 11, 25, 0.1);
-    margin-top: 10px;
-    padding-top: 20px;
+  padding: 0 25px 25px 25px;
+  font-size: 1rem;
+  color: #333;
+  border-top: 1px solid rgba(86, 11, 25, 0.1);
+  margin-top: 10px;
+  padding-top: 20px;
 }
 /* Le agregamos la animación a la respuesta solo cuando el acordeón está abierto ([open]) */
 /* TRUCO CSS GRID PARA ANIMACIÓN FLUIDA */
 .faq-answer-wrapper {
-    display: grid;
-    grid-template-rows: 0fr; /* Empieza colapsado (altura 0) */
-    transition: grid-template-rows 0.4s ease;
+  display: grid;
+  grid-template-rows: 0fr; /* Empieza colapsado (altura 0) */
+  transition: grid-template-rows 0.4s ease;
 }
 
 .faq-answer {
-    overflow: hidden; /* Oculta el texto cuando está cerrado */
+  overflow: hidden; /* Oculta el texto cuando está cerrado */
 }
 
 /* Espaciado del texto interno */
 .faq-answer p {
-    padding: 0 25px 25px 25px;
-    font-size: 1rem;
-    color: #333;
-    border-top: 1px solid rgba(86, 11, 25, 0.1);
-    margin-top: 10px;
-    padding-top: 20px;
+  padding: 0 25px 25px 25px;
+  font-size: 1rem;
+  color: #333;
+  border-top: 1px solid rgba(86, 11, 25, 0.1);
+  margin-top: 10px;
+  padding-top: 20px;
 }
 
 /* CUANDO ESTÁ ABIERTO */
 .faq-item.abierto .faq-answer-wrapper {
-    grid-template-rows: 1fr; /* Se expande a la altura exacta del texto */
+  grid-template-rows: 1fr; /* Se expande a la altura exacta del texto */
 }
 
 .faq-item.abierto .faq-icon {
-    transform: rotate(45deg);
-    color: var(--color-secundario-2);
+  transform: rotate(45deg);
+  color: var(--color-secundario-2);
 }
 
 .subtitle-content {
-    font-family: var(--fuente-subtitulos); 
-    font-size: 9rem; /* Lo hacemos bastante más grande */
-    color: var(--color-principal-2); 
-    font-style: italic; 
-    letter-spacing: 6px; /* Estira el texto horizontalmente separando las letras */
-    transform: scaleY(2); /* Estira las letras verticalmente (hacia arriba) */
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.8); /* Sombra un poco más fuerte para compensar el tamaño */
-    margin-bottom: 50px; 
+  font-family: var(--fuente-subtitulos);
+  font-size: 9rem; /* Lo hacemos bastante más grande */
+  color: var(--color-principal-2);
+  font-style: italic;
+  letter-spacing: 6px; /* Estira el texto horizontalmente separando las letras */
+  transform: scaleY(2); /* Estira las letras verticalmente (hacia arriba) */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Sombra un poco más fuerte para compensar el tamaño */
+  margin-bottom: 50px;
 }
 
 /* =========================================
-   DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
+   DISEÑO RESPONSIVO (MÓVILES Y TABLETS CHICAS)
 ========================================= */
 @media (max-width: 768px) {
-    
-    /* 1. HEADER Y MENÚ */
-    header {
-        flex-direction: column; /* Pone el logo arriba y el menú abajo */
-        padding: 15px 5%;
-        gap: 15px; /* Espacio entre el logo y los botones */
-    }
+  /* --- HEADER Y NAVEGACIÓN --- */
+  /* Apilamos el logo y el menú para que no se aprieten */
+  header {
+    flex-direction: column;
+    padding: 15px 5%;
+    gap: 15px;
+  }
 
-    #img_header {
-        margin-left: 0;
-        width: 100px; /* Logo más chico en el celu */
-        height: 100px;
-    }
+  #img_header {
+    margin-left: 0;
+    width: 100px; /* Logo más chico */
+    height: 100px;
+  }
 
-    nav {
-        padding-right: 0;
-        flex-wrap: wrap; /* Si no entran los botones, pasan a otra línea */
-        justify-content: center;
-        gap: 15px;
-    }
+  /* El menú pasa a acomodarse en varias filas si es necesario */
+  nav {
+    padding-right: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
 
-    nav a {
-        font-size: 0.8rem; /* Letra del menú más chica */
-    }
+  nav a {
+    font-size: 0.75rem; /* Letra más chica para que entren las opciones */
+    padding: 5px;
+  }
 
-    header.scrolled .texto-logo {
-        font-size: 1.2rem;
-        margin-left: 10px;
-        max-width: 250px;
-    }
+  /* Comportamiento del header al hacer scroll en móvil */
+  header.scrolled .texto-logo {
+    font-size: 1.1rem;
+    margin-left: 10px;
+    white-space: normal; /* Permite que el texto baje de línea si no entra */
+    text-align: center;
+  }
 
-    /* 2. TEXTOS Y PADDINGS GENERALES */
-    #HOME {
-        padding: 120px 5% 80px;
-        min-height: 70vh;
-    }
+  /* --- SECCIÓN HERO (INICIO) --- */
+  #HOME {
+    padding: 100px 5% 60px; /* Reducimos el espacio superior e inferior */
+    min-height: 60vh; /* No hace falta que ocupe tanta pantalla vertical */
+  }
 
-    .information_box h2 {
-        font-size: 2rem; /* Achicamos el título principal */
-    }
+  #text-title {
+    font-size: 2rem; /* Achicamos el título principal */
+  }
 
-    .information_box p {
-        font-size: 1rem;
-    }
+  .subtitle-content {
+    font-size: 1.2rem; /* Achicamos el latín */
+    letter-spacing: 4px; /* Reducimos la separación para que no se desborde */
+  }
 
-    .cards-block, .team-block, .contact-block {
-        padding: 60px 5%; /* Reducimos los espacios blancos gigantes */
-    }
+  /* Reducimos el logo del medio */
+  #img_body {
+    width: 100px;
+    height: 100px;
+  }
 
-    .cards-block h2, .team-block h2, .contact-block > h2 {
-        font-size: 2rem; /* Achicamos los títulos de las secciones */
-    }
+  /* --- PADDINGS GENERALES Y TÍTULOS DE SECCIÓN --- */
+  /* Le sacamos aire a las secciones para que el usuario no scrollee en blanco */
+  .cards-block,
+  .team-block,
+  .contact-block {
+    padding: 60px 5%;
+  }
 
-    /* 3. BOTONES WHATSAPP */
-    .btn-wsp {
-        padding: 12px 20px;
-        font-size: 0.85rem;
-    }
+  .cards-block h2,
+  .team-block h2,
+  .contact-block > h2 {
+    font-size: 1.8rem;
+  }
 
-    .btn-wsp-flotante {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-    }
+  .cards-block h4,
+  .faq-block h4 {
+    margin-bottom: 30px;
+    font-size: 1rem;
+  }
 
-    .btn-wsp-flotante svg {
-        width: 30px;
-        height: 30px;
-    }
+  /* --- TARJETAS DE SERVICIOS Y EQUIPO --- */
+  /* Aseguramos que ocupen el 100% del ancho del celu */
+  #cards,
+  #us_card {
+    grid-template-columns: 1fr; /* Fuerza a 1 sola columna */
+    gap: 30px;
+  }
+
+  .info-cards {
+    max-width: 100%;
+  }
+
+  /* --- PREGUNTAS FRECUENTES (FAQ) --- */
+  .faq-container {
+    margin-top: 20px;
+  }
+
+  .faq-question {
+    padding: 15px; /* Menos padding interno */
+  }
+
+  .faq-textos h3 {
+    font-size: 1rem;
+  }
+
+  .faq-short {
+    font-size: 0.85rem;
+  }
+
+  /* --- CONTACTO Y FORMULARIO --- */
+  .info-form-container {
+    flex-direction: column; /* Apila el cuadro de info y el form */
+    gap: 30px;
+  }
+
+  #info-div,
+  .form {
+    width: 100%; /* Ocupan todo el ancho disponible */
+    min-width: unset;
+    padding: 30px 20px;
+  }
+
+  /* --- BOTONES Y FLOTANTES --- */
+  /* Ajustamos el botón general */
+  .btn-wsp {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+    width: 100%; /* Hacemos que el botón ocupe todo el ancho de la tarjeta */
+  }
+
+  /* Achicamos el botón de WhatsApp de la esquina para que no moleste al leer */
+  .btn-wsp-flotante {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .btn-wsp-flotante svg {
+    width: 30px;
+    height: 30px;
+  }
 }
