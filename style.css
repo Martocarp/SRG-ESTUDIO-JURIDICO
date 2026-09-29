@@ -658,6 +658,131 @@ footer {
 }
 
 /* =========================================
+   SECCIÓN CONTACTO E INFORMACIÓN (MAPA)
+========================================= */
+.info-textos {
+  margin-bottom: 25px;
+}
+.info-textos p {
+  color: var(--color-secundario-3);
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+.info-textos h3 {
+  text-align: center;
+  color: var(--color-principal-2); /* Mantiene el color bordó del estudio */
+  margin-top: 20px; /* Le da un poco de aire arriba */
+  margin-bottom: 5px; /* Lo acerca al párrafo de abajo */
+  font-size: 1.2rem;
+  border: var(--color-secundario-2) solid 1px;
+}
+.info-textos strong {
+  font-weight: 600;
+}
+.mapa-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.map-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/* =========================================
+   BOTONES DE ACCIÓN (DENTRO DEL DIV .FORM)
+========================================= */
+#form h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.form-desc {
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.cta-botones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* El botón de WhatsApp un poco más destacado */
+.cta-principal {
+  font-size: 1.1rem;
+  padding: 16px;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(86, 11, 25, 0.2);
+}
+
+/* Botones de Llamada y Correo (Estilo Fantasma) */
+.btn-secundario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  background-color: transparent;
+  color: var(--color-principal-1); /* Letras y bordes color bordó */
+  border: 2px solid var(--color-principal-1);
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: var(--fuente-textos);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-secundario:hover {
+  background-color: var(--color-principal-1);
+  color: var(--color-blanco);
+}
+
+/* =========================================
+   SECCIÓN DE CONFIANZA Y TÉRMINOS LEGALES
+========================================= */
+.trust-section {
+  margin-top: 30px;
+  border-top: 1px solid rgba(86, 11, 25, 0.15); /* Línea divisoria muy sutil color bordó */
+  padding-top: 25px;
+}
+
+.trust-checklist {
+  list-style: none; /* Saca los puntitos predeterminados */
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.trust-checklist li {
+  font-size: 0.9rem;
+  color: #444; /* Gris oscuro para lectura cómoda */
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-family: var(--fuente-textos);
+}
+
+.trust-checklist strong {
+  color: var(--color-principal-1); /* Destaca los términos en bordó */
+  display: block; /* Pone el título arriba de la descripción */
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+
+.aviso-urgencia {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-principal-1);
+  margin: 0;
+  background-color: rgba(86, 11, 25, 0.05); /* Un fondo apenas perceptible */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* =========================================
    DISEÑO RESPONSIVO (MÓVILES Y TABLETS CHICAS)
 ========================================= */
 @media (max-width: 768px) {
