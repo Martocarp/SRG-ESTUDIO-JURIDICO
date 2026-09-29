@@ -712,6 +712,36 @@ footer {
   gap: 15px;
 }
 
+/* =========================================
+   BOTÓN TÉRMINOS Y PRIVACIDAD (FOOTER)
+========================================= */
+#typ-button {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#typ-button a {
+  display: inline-block;
+  font-family: var(--fuente-textos);
+  font-size: 1rem; /* Letra pequeña y discreta */
+  color: var(
+    --color-secundario-1
+  ); /* Gris claro para que no resalte demasiado */
+  text-decoration: none;
+  padding: 6px 18px;
+  border: 1px solid var(--color-secundario-4); /* Borde muy sutil */
+  border-radius: 20px; /* Forma de píldora elegante */
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+#typ-button a:hover {
+  color: white; /* La letra se ilumina */
+  border-color: white; /* El borde se ilumina */
+  background-color: rgba(255, 255, 255, 0.1); /* Brillo de fondo muy suave */
+}
+
 /* El botón de WhatsApp un poco más destacado */
 .cta-principal {
   font-size: 1.1rem;
